@@ -25,12 +25,12 @@ const Header = () => {
       </li>
       <li>
         <NavLink
-          to="/messages"
+          to="/login"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
         >
-          Messages
+          Login
         </NavLink>
       </li>
       <li>
@@ -78,7 +78,10 @@ const Header = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
-      <div className="navbar-end">
+      <div>
+        <Link to="/login" className="btn">Login</Link>
+      </div>
+      {/* <div className="navbar-end">
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
@@ -103,7 +106,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

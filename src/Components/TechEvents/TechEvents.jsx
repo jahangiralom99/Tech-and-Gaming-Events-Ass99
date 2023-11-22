@@ -4,8 +4,6 @@ import Events from "../Events/Events";
 const TechEvents = () => {
 
     const events = useLoaderData();
-
-    console.log(events);
     return (
         <div className="mt-8">
             <h1 className="text-4xl font-bold">Tech Events Here</h1>
