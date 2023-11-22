@@ -5,12 +5,13 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { BsGoogle } from "react-icons/bs";
 
 const Login = () => {
   const [error, setError] = useState(null);
-  const { logInUser } = useContext(AuthContext);
+  const { logInUser, googleLogIn, } = useContext(AuthContext);
   const navigate = useNavigate();
-  const location = useLocation()
+  const location = useLocation();
 
   const handelLogIn = (e) => {
     e.preventDefault();
@@ -42,6 +43,38 @@ const Login = () => {
       });
     // console.log(email, password);
   };
+
+
+  const handleGoogleBtn = () => {
+    googleLogIn()
+      .then(result => {
+        const users = result.user;
+        toast.success("User google login successfully!", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        console.log(users);
+      })
+      .catch(err => {
+        const errorMessage = err.message;
+        toast.error(errorMessage, {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+      })
+  }
 
   return (
     <div className="">
@@ -92,10 +125,24 @@ const Login = () => {
                 </button>
               </div>
             </form>
+            <div onClick={handleGoogleBtn} className="text-center">
+              <button className="btn btn-outline btn-primary">
+                <BsGoogle className="text-red-500" />
+                Log in with
+                <div>
+                  <span className="text-[#008744]">G</span>
+                  <span className="text-red-500">o</span>
+                  <span className="text-[#ffa700]">o</span>
+                  <span className="text-[#008744]">g</span>
+                  <span className="text-[#009955]">l</span>
+                  <span className="text-white">e</span>
+                </div>
+              </button>
+            </div>
             {error && (
               <p className="text-bold text-red-500 mb-8 px-4">{error}</p>
             )}
-            <p>
+            <p className="mt-6">
               You don't have an account ? Please{" "}
               <Link className="text-red-500" to="/register">
                 Register

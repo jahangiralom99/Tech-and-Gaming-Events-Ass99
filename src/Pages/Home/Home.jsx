@@ -5,7 +5,7 @@ import TechEvents from "../../Components/TechEvents/TechEvents";
 const Home = () => {
   return (
     <div className="p-4">
-          <Banner></Banner>
+      <Banner></Banner>
       <TechEvents></TechEvents>
       <AboutTech></AboutTech>
     </div>

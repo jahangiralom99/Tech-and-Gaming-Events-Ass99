@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const [error, setError] = useState(null)
-    const { createUser } = useContext(AuthContext)
+    const { createUser ,updateName} = useContext(AuthContext)
     
     const handleCreateUser = (e) => {
         e.preventDefault();
@@ -42,7 +42,10 @@ const Register = () => {
                 draggable: true,
                 progress: undefined,
                 theme: "light",
-                });
+              });
+              updateName(name)
+                .then()
+                .catch()
                 console.log(users);
             })
           .catch(err => {
@@ -58,7 +61,6 @@ const Register = () => {
               theme: "light",
               });
             })
-        console.log(password,name);
     }
 
     return (

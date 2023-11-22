@@ -51,22 +51,22 @@ const Header = () => {
       </li>
       <li>
         <NavLink
-          to="/techEvents"
+          to="/gamesEvent"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
         >
-          Tech Events
+          Games Event
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/gameEvents"
+          to="/about"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active " : ""
           }
         >
-          Games Event
+          About Us
         </NavLink>
       </li>
     </>
@@ -120,10 +120,10 @@ const Header = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <p className="justify-between">Profile</p>
+                <p className="justify-between">{user?.displayName}</p>
               </li>
               <li>
-                <p>Settings</p>
+                <p>{user?.email}</p>
               </li>
               <li>
                 <p onClick={handleLogOut}>Logout</p>

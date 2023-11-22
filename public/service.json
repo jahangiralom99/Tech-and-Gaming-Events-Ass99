@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/RYqbqZQ/intelligent-automation2.jpg",
+    "name": "Intelligent automation",
+    "description": "Intelligent business process management and automation save you money, improve accuracy and increase productivity."
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/DrWBnJL/rguc-unsplash.jpg",
+    "name": "Security services",
+    "description": "Your Nordic cybersecurity partner. We help you unleash the digital potential and safeguard your digital assets."
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/FwfY9Db/next-gen-application-services.jpg",
+    "name": "Next-generation services",
+    "description": "Next-gen Enterprise Service is a winning solution for managed application and infrastructure and IT services."
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/JK5V7yp/data-driven-business-transformation.jpg",
+    "name": "Data driven business transformation",
+    "description": "We help you to use data, analytics and artificial intelligence to create business value and a competitive edge."
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/GFskgp9/colleagues-screenoffice.jpg",
+    "name": "Digital workplace services",
+    "description": "Digital workplace services for increased agility and work efficiency. We focus on analytics and great user experience."
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/jMBDZsL/20220613-tietoevry-6730-smaller-for-navi.png",
+    "name": "Cloud and infrastructure services",
+    "description": "We enable digital business with our local experts, comprehensive package of hybrid, private and public cloud solutions."
+  }
+]

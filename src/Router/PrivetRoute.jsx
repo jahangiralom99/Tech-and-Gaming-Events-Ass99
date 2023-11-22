@@ -8,10 +8,9 @@ const PrivetRoute = ({ children }) => {
     const { user, loader } = useContext(AuthContext);
 
     const location = useLocation();
-    console.log(location);
 
     if (loader) {
-        return <h1 className="text-5xl font-bold flex h-screen"> Loading......</h1>
+        return <h1 className="text-5xl font-bold flex h-screen items-center justify-center"><span className="loading loading-spinner text-error w-40"></span></h1>
     }
 
     if (!user) {
