@@ -1,6 +1,32 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        toast.info('Log out!', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+      })
+      .catch(() =>{
+        
+      })
+
+  };
+
   const navLinks = (
     <>
       <li className="">
@@ -15,32 +41,32 @@ const Header = () => {
       </li>
       <li>
         <NavLink
-          to="/messages"
+          to="/service"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
         >
-          Service
+         All Service
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/login"
+          to="/techEvents"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
         >
-          Login
+          Tech Events
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/messages"
+          to="/gameEvents"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active " : ""
           }
         >
-          Messages
+          Games Event
         </NavLink>
       </li>
     </>
@@ -78,35 +104,39 @@ const Header = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
-      <div>
-        <Link to="/login" className="btn">Login</Link>
-      </div>
-      {/* <div className="navbar-end">
-        <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://picsum.photos/200"
-              />
-            </div>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-          >
-            <li>
-              <Link className="justify-between">Profile</Link>
-            </li>
-            <li>
-              <Link>Settings</Link>
-            </li>
-            <li>
-              <Link>Logout</Link>
-            </li>
-          </ul>
+      {user ? (
+        <div className="navbar-end">
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://picsum.photos/200"
+                />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <p className="justify-between">Profile</p>
+              </li>
+              <li>
+                <p>Settings</p>
+              </li>
+              <li>
+                <p onClick={handleLogOut}>Logout</p>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div> */}
+      ) : (
+        <div className="navbar-end">
+          <Link to="/login" className="btn">Login</Link>
+        </div>
+      )}
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
