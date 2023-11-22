@@ -1,45 +1,45 @@
 [
     {
       "id": 1,
-      "name": "Product A",
-      "image": "path/to/imageA.jpg",
-      "price": 19.99,
-      "description": "A detailed description of Product A."
+      "name": "Mobile World Congress",
+      "image": "https://i.ibb.co/Rpbs3J4/MWC-2019-46296915385.jpg",
+      "price": 25.99,
+      "description": "MWC Barcelona is an annual trade show organised by GSMA, dedicated primarily to the mobile communications industry. The event is held in Barcelona, Catalonia, Spain, at the Fira de Barcelona Gran Via, usually in February or early March."
     },
     {
       "id": 2,
-      "name": "Product B",
-      "image": "path/to/imageB.jpg",
-      "price": 29.99,
-      "description": "A detailed description of Product B."
+      "name": "London Tech Week",
+      "image": "https://i.ibb.co/3hC8S8x/London-Tech-Week.jpg",
+      "price": 30.00,
+      "description": "London Tech Week 2023 will feature more content than ever across the new Start-up, Enterprise and Leaders Zones and seven stages, including the brand-new Transformation Stage, a larger demo zone, fresh content for scaleups, start-ups, and enterprise plus spotlights on UK entrepreneurship and inclusivity. It is the place to connect everyone in the global tech sector, from start-up founders to corporate leaders, investors, innovators, policy makers and VCs, as well as the next generation of tech unicorns (‘soonicorns’) to continue driving change. "
     },
     {
       "id": 3,
-      "name": "Product C",
-      "image": "path/to/imageC.jpg",
+      "name": "TechCrunch Disrupt",
+      "image": "https://i.ibb.co/FH2YGSN/Disrupt.webp",
       "price": 39.99,
-      "description": "A detailed description of Product C."
+      "description": "Welcome to TechCrunch comments! Please keep conversations courteous and on-topic. To foster productive and respectful conversations, you may see comments from our Community Managers, who will be designated by a TechCrunch Staff or Staff label. To promote the best user experience, we close commenting after an article has been posted for three days. TechCrunch Finance's Conversations message boards accept comments indefinitely. See our community guidelines for more information."
     },
     {
       "id": 4,
-      "name": "Product D",
-      "image": "path/to/imageD.jpg",
+      "name": "Tech Open Air",
+      "image": "https://i.ibb.co/G251dYH/Tech-Open-Air.jpg",
       "price": 49.99,
-      "description": "A detailed description of Product D."
+      "description": "Our mission is to help people and organizations become future proof.TOA started as the world's first crowd-funded conference and evolved into a community of thousands of technology enthusiasts gathering in Berlin each summer.TOA24 will yet again build on its roots in Deep Tech and present technology that has the potential to program a better future: Climate Tech, Health Tech, SynBio, Web3 & AI."
     },
     {
       "id": 5,
-      "name": "Product E",
-      "image": "path/to/imageE.jpg",
+      "name": "London Tech Week",
+      "image": "https://i.ibb.co/q0Nt59s/techweek-bg.jpg",
       "price": 59.99,
-      "description": "A detailed description of Product E."
+      "description": "London Tech Week is a global celebration of tech, uniting the most innovative thinkers and talent of tomorrow in a week-long festival. This year's event will look at shaping the future, showcasing the IoT and how tech is transforming business and society through provoking conversations about innovation, diversity, and transformation. The event is supported by some of the industries leading companies, including Snap Inc, Microsoft UK, Amazon, Calm, Metam, and many more."
     },
     {
       "id": 6,
-      "name": "Product F",
-      "image": "path/to/imageF.jpg",
+      "name": " Viva Technology",
+      "image": "https://i.ibb.co/nPYSJ1L/viva.jpg",
       "price": 69.99,
-      "description": "A detailed description of Product F."
+      "description": "VivaTech is the world's rendezvous for startups and leaders to celebrate innovation. It's a gathering of the world's brightest minds, talents, and products in Paris. Leaders from companies like Ethereum, LinkedIn, Snap INC, Binance, and more will attend Viva in 2023, making this a go-to event for entrepreneurs worldwide. "
     }
   ]
   

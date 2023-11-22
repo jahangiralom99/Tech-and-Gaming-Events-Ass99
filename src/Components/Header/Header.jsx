@@ -3,11 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   const navLinks = (
     <>
-      <li>
+      <li className="">
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
+            isPending ? "pending" : isActive ? "active text-white" : ""
           }
         >
           Home
@@ -37,7 +37,7 @@ const Header = () => {
         <NavLink
           to="/messages"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
+            isPending ? "pending" : isActive ? "active " : ""
           }
         >
           Messages
@@ -68,12 +68,12 @@ const Header = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
           >
             {navLinks}
           </ul>
         </div>
-        <Link className="btn btn-ghost text-xl">Tech and Gaming Events</Link>
+        <Link className="btn btn-ghost text-xl ">Tech and Gaming Events</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
@@ -93,13 +93,13 @@ const Header = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a className="justify-between">Profile</a>
+              <Link className="justify-between">Profile</Link>
             </li>
             <li>
-              <a>Settings</a>
+              <Link>Settings</Link>
             </li>
             <li>
-              <a>Logout</a>
+              <Link>Logout</Link>
             </li>
           </ul>
         </div>
