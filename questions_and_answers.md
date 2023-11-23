@@ -20,8 +20,7 @@ console.log(greetign);
 
 #### Answer: (A)?
 
-<i>Write your explanation here</i>
-    Ans: -it assigns an empty object to the correct variable (greeting), and when you log it to the console, you'll see an empty object.
+<i>Ans: -it assigns an empty object to the correct variable (greeting), and when you log it to the console, you'll see an empty object.</i>  
 </p>
 </details>
 
@@ -45,8 +44,8 @@ sum(1, "2");
 
 #### Answer: (C)?
 
-<i>Write your explanation here</i>
- And: the result of the sum(1, "2") call is not the numerical sum of 1 and 2, but the string concatenation just like of "1" and "2"
+<i>And: the result of the sum(1, "2") call is not the numerical sum of 1 and 2, but the string concatenation just like of "1" and "2"</i>
+ 
 </p>
 </details>
 
@@ -71,8 +70,8 @@ console.log(food);
     
 #### Answer: (A)?
 
-<i>Write your explanation here</i>
-    Object does not affect the original array. When the names array is logged to the console, it outputs the original array.
+<i>Ans: Object does not affect the original array. When the names array is logged to the console, it outputs the original array.</i>
+
 </p>
 </details>
 
@@ -96,8 +95,8 @@ console.log(sayHi());
 
 #### Answer: (B)?
 
-<i>Write your explanation here</i>
-    in this case, you called function but. not pass a Argument.  "name" is not define so output is "Hi there, undefined" 
+<i>And : in this case, you called function but. not pass a Argument.  "name" is not define so output is "Hi there, undefined" </i>
+    
 </p>
 </details>
 
@@ -124,7 +123,7 @@ console.log(count);
 
 #### Answer: (C)?
 
-<i>Write your explanation here</i>
-    your  Ans is 3, because ,the loop will increment count for each element in the array that is not equal to 0. truthy values are 1, 2, and 3. Therefore,and count 3 times.
+<i>Ans:your  Ans is 3, because ,the loop will increment count for each element in the array that is not equal to 0. truthy values are 1, 2, and 3. Therefore,and count 3 times.</i>
+
 </p>
 </details>
