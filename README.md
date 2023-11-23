@@ -1,8 +1,8 @@
 # *Live Link here 
-    *https://tech-and-gaming-auth.web.app/
+    https://tech-and-gaming-auth.web.app/
 
 # *Projects Name :
-    *Tech and Gaming Events
+    Tech and Gaming Events
 
 
 # *Top 5 Features in My Project: 
