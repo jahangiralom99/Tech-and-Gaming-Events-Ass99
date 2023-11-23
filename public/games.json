@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Gamer Network’s EGX",
+    "image": "https://i.ibb.co/S6hVYRQ/egx.jpg",
+    "description": "EGX is a trade fair for video games organised by Gamer Network and held annually in the United Kingdom and Germany.",
+    "location": "United Kingdom and Germany",
+    "price": 100
+  },
+  {
+    "id": 2,
+    "name": "Tokyo Game Show",
+    "image": "https://i.ibb.co/9vH3YQC/tokyo-gamer.jpg",
+    "description": "Tokyo Game Show, commonly known as TGS, is a video game trade fair and convention held annually in September in the Makuhari Messe, in Chiba, Japan. It is presented by the Computer Entertainment Supplier's Association and Nikkei Business Publications, Inc.",
+    "location": "Tokyo ,Japan",
+    "price": 150
+  },
+  {
+    "id": 3,
+    "name": "GTR Conference 2023",
+    "image": "https://i.ibb.co/5MF7SXS/Banner-GTR-Conference-2023.jpg",
+    "description": "The GTR Conference 2023 is an annual gathering that serves as a networking event for the GTR community and as a celebratory occasion for our GTR Accelerator studios. The conference is a private event attended by investors, publishers, partners and annual Top 20 finalists among",
+    "location": "Europe",
+    "price": 200
+  },
+  {
+    "id": 4,
+    "name": "Global Top Round Conference 2023",
+    "image": "https://i.ibb.co/68L2qX0/Banner-Globa.jpg",
+    "description": "The Global Top Round (GTR) Conference is an annual event focused on the gaming industry. It served as a platform where gaming industry professionals, including investors, publishers, angel investors, studios, and other stakeholders, gathered to network, share ideas, showcase their",
+    "location": "Europe",
+    "price": 120
+  }
+]

@@ -8,6 +8,8 @@ import Register from "../Pages/Register/Register";
 import AllService from "../Pages/ALlService/AllService";
 import PrivetRoute from "./PrivetRoute";
 import About from "../Pages/About/About";
+import GamesEvent from "../Pages/GamesEvent/GamesEvent";
+import Games from "../Pages/Games/Games";
 
 const Router = createBrowserRouter([
   {
@@ -31,8 +33,21 @@ const Router = createBrowserRouter([
       },
       {
         path: "/service",
-          element: <PrivetRoute><AllService></AllService></PrivetRoute>,
-          loader: () => fetch("/service.json"),
+        element: (
+          <PrivetRoute>
+            <AllService></AllService>
+          </PrivetRoute>
+        ),
+        loader: () => fetch("/service.json"),
+      },
+      {
+        path: "/gamesEvent",
+          element: <PrivetRoute><GamesEvent></GamesEvent></PrivetRoute>
+      },
+      {
+        path: "/games/:id",
+        element: <PrivetRoute><Games></Games></PrivetRoute>,
+        loader: () => fetch("/games.json"),
       },
       {
         path: "/about",

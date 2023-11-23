@@ -10,14 +10,14 @@ const About = () => {
         </div>
       </div>
       <div className="mx-auto -mt-24">
-        <div className="text-center">
+        <div data-aos="slide-up" className="text-center">
           <img
             className="w-[300px] md:w-[500px] inline tex"
             src={milon}
             alt="jahangir.jpg"
           />
         </div>
-        <div className="w-[300px] md:w-[500px] mx-auto mt-6 space-y-6 ">
+        <div data-aos="slide-up" className="w-[300px] md:w-[500px] mx-auto mt-6 space-y-6 ">
           <h1 className="text-2xl font-bold ">About Us</h1>
           <p className="font-bold ml-6">
             Welcome to Tech and Gaming Events Where Innovation Meets Excellence!

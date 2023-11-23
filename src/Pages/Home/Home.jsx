@@ -1,6 +1,7 @@
 import AboutTech from "../../Components/AboutTech/AboutTech";
 import Banner from "../../Components/Banner/Banner";
 import TechEvents from "../../Components/TechEvents/TechEvents";
+import GamesEvent from "../GamesEvent/GamesEvent";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Banner></Banner>
       <TechEvents></TechEvents>
       <AboutTech></AboutTech>
+      <GamesEvent></GamesEvent>
     </div>
   );
 };

@@ -59,6 +59,7 @@ const Login = () => {
           progress: undefined,
           theme: "light",
         });
+        navigate(location?.state ? location.state : "/");
         console.log(users);
       })
       .catch(err => {
