@@ -10,7 +10,7 @@ const Header = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        toast.info('Log out!', {
+        toast.info("Log out!", {
           position: "top-center",
           autoClose: 5000,
           hideProgressBar: false,
@@ -19,13 +19,12 @@ const Header = () => {
           draggable: true,
           progress: undefined,
           theme: "light",
-          });
+        });
       })
-      .catch(() =>{
-        
-      })
-
+      .catch(() => {});
   };
+
+  console.log(user);
 
   const navLinks = (
     <>
@@ -46,7 +45,7 @@ const Header = () => {
             isPending ? "pending" : isActive ? "active" : ""
           }
         >
-         All Service
+          All Service
         </NavLink>
       </li>
       <li>
@@ -109,10 +108,7 @@ const Header = () => {
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://picsum.photos/200"
-                />
+                <img alt="" src={user?.photoURL} />
               </div>
             </label>
             <ul
@@ -133,7 +129,9 @@ const Header = () => {
         </div>
       ) : (
         <div className="navbar-end">
-          <Link to="/login" className="btn">Login</Link>
+          <Link to="/login" className="btn">
+            Login
+          </Link>
         </div>
       )}
       <ToastContainer></ToastContainer>
