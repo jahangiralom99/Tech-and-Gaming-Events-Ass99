@@ -4,9 +4,11 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { useContext, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 
 const Register = () => {
-    const [error, setError] = useState(null)
+  const [error, setError] = useState(null)
+  const [isShow, setIsShow] = useState(false);
     const { createUser ,updateName} = useContext(AuthContext)
     
     const handleCreateUser = (e) => {
@@ -103,13 +105,22 @@ const Register = () => {
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <input
-                type="text"
-                  placeholder="Your password"
-                  name="password"
-                className="input input-bordered"
-                required
-              />
+              <div className="flex items-center justify-center">
+                  <input
+                    type={isShow ? "text" : "password"}
+                    placeholder="Your password"
+                    name="password"
+                    className="input input-bordered w-full"
+                    required
+                  />
+                  <div onClick={() => setIsShow(!isShow)} className="-ml-8">
+                    {isShow ? (
+                      <BsEyeFill className="text-xl" />
+                    ) : (
+                      <BsEyeSlashFill className="text-xl" />
+                    )}
+                  </div>
+                </div>
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?

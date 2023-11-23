@@ -5,11 +5,12 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { BsGoogle } from "react-icons/bs";
+import { BsEyeFill, BsEyeSlashFill, BsGoogle } from "react-icons/bs";
 
 const Login = () => {
   const [error, setError] = useState(null);
-  const { logInUser, googleLogIn, } = useContext(AuthContext);
+  const [isShow, setIsShow] = useState(false);
+  const { logInUser, googleLogIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -44,10 +45,9 @@ const Login = () => {
     // console.log(email, password);
   };
 
-
   const handleGoogleBtn = () => {
     googleLogIn()
-      .then(result => {
+      .then((result) => {
         const users = result.user;
         toast.success("User google login successfully!", {
           position: "top-center",
@@ -62,7 +62,7 @@ const Login = () => {
         navigate(location?.state ? location.state : "/");
         console.log(users);
       })
-      .catch(err => {
+      .catch((err) => {
         const errorMessage = err.message;
         toast.error(errorMessage, {
           position: "top-center",
@@ -73,9 +73,9 @@ const Login = () => {
           draggable: true,
           progress: undefined,
           theme: "light",
-          });
-      })
-  }
+        });
+      });
+  };
 
   return (
     <div className="">
@@ -107,13 +107,24 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input
-                  type="text"
-                  placeholder="Your password"
-                  name="password"
-                  className="input input-bordered"
-                  required
-                />
+                <div className="flex items-center justify-center">
+                  <input
+                    type={isShow ? "text" : "password"}
+                    placeholder="Your password"
+                    name="password"
+                    className="input input-bordered w-full"
+                    required
+                  />
+                  <div onClick={() => setIsShow(!isShow)} className="-ml-8">
+                    {isShow ? (
+                      <BsEyeFill className="text-xl" />
+                    ) : (
+                      <BsEyeSlashFill className="text-xl" />
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div>
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
